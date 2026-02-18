@@ -1,0 +1,66 @@
+[project]
+name = "flightimpact"
+version = "0.1.0"
+description = "A reproducible flight CO₂ estimator with uncertainty quantification"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "numpy>=2.0",
+    "scipy>=1.12",
+    "typer>=0.12",
+]
+
+[project.scripts]
+flightimpact = "flightimpact.cli:app"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[dependency-groups]
+dev = [
+    "hypothesis>=6.148.8",
+    "mypy>=1.10",
+    "pytest>=8.0",
+    "ruff>=0.5",
+    "matplotlib>=3.8",
+    "hatchling>=1.28.0",
+]
+
+[tool.mypy]
+strict = true
+python_version = "3.11"
+warn_return_any = true
+warn_unused_configs = true
+warn_unused_ignores = true
+disallow_untyped_defs = true
+ignore_missing_imports = true
+check_untyped_defs = true
+
+mypy_path = "src"
+explicit_package_bases = true
+namespace_packages = true
+files = ["src", "tests"]
+
+[tool.ruff]
+line-length = 120
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP"]
+dummy-variable-rgx = "^(_+|(_+[a-zA-Z0-9_]*[a-zA-Z0-9]+?))$"
+
+[tool.ruff.lint.isort]
+combine-as-imports = true
+known-first-party = ["flightimpact"]
+force-wrap-aliases = true
+
+[tool.ruff.format]
+quote-style = "double"
+indent-style = "space"
+skip-magic-trailing-comma = false
+line-ending = "auto"
+
+[tool.pytest.ini_options]
+pythonpath = ["src", "."]
+testpaths = ["tests"]
