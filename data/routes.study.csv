@@ -1,0 +1,21 @@
+route_id,origin,destination,distance_band,notes
+us_short_01,SFO,LAX,short,high-frequency trunk route
+us_short_02,LAX,SEA,short,west coast corridor
+us_short_03,ORD,BOS,short,midwest-east corridor
+us_short_04,ATL,BOS,short,southeast-northeast corridor
+us_short_05,SFO,SEA,short,regional major hubs
+us_short_06,DEN,ORD,short,mountain-midwest corridor
+us_medium_01,SFO,DEN,medium,west to mountain hub
+us_medium_02,LAX,DEN,medium,west to mountain hub
+us_medium_03,JFK,ATL,medium,northeast-southeast corridor
+us_medium_04,JFK,ORD,medium,northeast-midwest corridor
+us_medium_05,SEA,DEN,medium,northwest to mountain hub
+us_medium_06,LAX,ORD,medium,west-midwest trunk
+us_long_01,SFO,JFK,long,transcontinental baseline
+us_long_02,LAX,JFK,long,transcontinental baseline
+us_long_03,SEA,JFK,long,northwest to northeast
+us_long_04,SFO,BOS,long,bay area to northeast
+us_long_05,LAX,BOS,long,southern transcontinental
+us_long_06,SEA,ATL,long,northwest to southeast
+us_long_07,SFO,ATL,long,west to southeast
+us_long_08,DEN,BOS,long,mountain to northeast
